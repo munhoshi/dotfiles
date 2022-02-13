@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+#This is just for reference - it's how I first set it up.
+
 #Set up bare dotfiles repo
 git init --bare $HOME/.cfg
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
