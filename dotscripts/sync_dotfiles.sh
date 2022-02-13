@@ -17,4 +17,4 @@ fi;
 config checkout
 config config status.showUntrackedFiles no
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.oh-my-zsh/custom/alias.zsh
+echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.zshrc
