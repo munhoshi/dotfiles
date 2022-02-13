@@ -105,4 +105,6 @@ autoload remap
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/'
+alias config='/usr/bin/git --git-dir=/home/pixi/.cfg/ --work-tree=/home/pixi'
+alias yt="ytfzf -t --detach"
+alias please="sudo"
