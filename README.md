@@ -1,7 +1,5 @@
 # songpixi's dotfiles
-These are my dotfiles. They are managed via a bare repo.
-
-**Note:** management is accomplished with a bare repository. Thanks to @durdn for the [excellent guide](https://www.atlassian.com/git/tutorials/dotfiles).
+These are my dotfiles. They are managed via a bare repo. Thanks to @durdn for the [excellent guide](https://www.atlassian.com/git/tutorials/dotfiles).
 
 ## Dependencies
 Zsh must be installed and set as the default shell. Oh My Zsh! is HIGHLY recommended.
