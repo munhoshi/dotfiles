@@ -1,8 +1,8 @@
 [Appearance]
 ColorScheme=Campbell
-Font=Terminus,11,-1,5,50,0,0,0,0,0
+Font=DejaVu Sans Mono,11,-1,5,50,0,0,0,0,0
 
 [General]
 Command=/bin/zsh
-Name=Profile 1
+Name=Laptop
 Parent=FALLBACK/
