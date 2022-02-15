@@ -110,4 +110,4 @@ alias yt="ytfzf -t --detach"
 
 # Fluffy stuff"
 alias please="sudo"
-alias thanks="echo 'Shell: You are welcome! \\(^o^)/' | lolcat"
+alias thanks="echo '$(echo $0 | grep -oP '[^/bin/].*'): You are welcome! \\(^o^)/' | lolcat"
