@@ -107,4 +107,7 @@ autoload remap
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias config='/usr/bin/git --git-dir=/home/pixi/.cfg/ --work-tree=/home/pixi'
 alias yt="ytfzf -t --detach"
+
+# Fluffy stuff"
 alias please="sudo"
+alias thanks="echo 'Shell: You are welcome! \\(^o^)/' | lolcat"
