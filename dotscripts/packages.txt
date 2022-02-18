@@ -1,1 +1,1 @@
-vim neofetch lolcat cowsay ytfzf mpv yt-dlp falkon signal-desktop telegram-desktop spotify frozen-bubble kompare kvantum imagewriter visual-studio-code-bin ani-cli
+vim neofetch lolcat cowsay ytfzf mpv yt-dlp falkon signal-desktop telegram-desktop spotify frozen-bubble kompare kvantum imagewriter visual-studio-code-bin ani-cli trash-cli sxiv
