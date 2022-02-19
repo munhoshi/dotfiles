@@ -110,5 +110,6 @@ alias config='/usr/bin/git --git-dir=/home/pixi/.cfg/ --work-tree=/home/pixi'
 alias yt="ytfzf -t --detach"
 
 # Fluffy stuff
+alias pls="sudo"
 alias please="sudo"
 alias thanks="echo '$(echo $0 | grep -oE '[^/bin/].*'): You are welcome, $(whoami)! \\(^o^)/' | lolcat -F 0.55"
