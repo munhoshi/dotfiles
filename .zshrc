@@ -105,9 +105,10 @@ autoload remap
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 alias config='/usr/bin/git --git-dir=/home/pixi/.cfg/ --work-tree=/home/pixi'
 alias yt="ytfzf -t --detach"
 
-# Fluffy stuff"
+# Fluffy stuff
 alias please="sudo"
-alias thanks="echo '$(echo $0 | grep -oP '[^/bin/].*'): You are welcome! \\(^o^)/' | lolcat"
+alias thanks="echo '$(echo $0 | grep -oE '[^/bin/].*'): You are welcome, $(whoami)! \\(^o^)/' | lolcat -F 0.55"
