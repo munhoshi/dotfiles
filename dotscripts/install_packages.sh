@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #Fix keyring:
 sudo echo "session		optional	pam_gnome_keyring.so auto_start" >> /etc/pam.d/sddm

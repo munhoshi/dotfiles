@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 #This is just for reference - it's how I first set it up.
 

@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 git clone --bare https://github.com/songpixi/dotfiles.git $HOME/.cfg
 echo ".cfg" >> .gitignore
