@@ -1,0 +1,10 @@
+#!/bin/sh
+
+query=$(printf '%s' "$*" | tr ' ' '+')
+
+#return first search result
+result=$(curl -s https://wiki.archlinux.org/index.php\?search\=$query\&title\=Special%3ASearch\&fulltext\=Search | grep -oE 'title\/.*(data-serp-pos="0)"' | head -n 1 | tr -d '"')
+#delete " with tr
+url=$(printf $result | grep -oE '.*' | tr -d '"')
+echo $url
+lynx https://wiki.archlinux.org/$url
