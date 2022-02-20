@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=Campbell
+ColorScheme=Campbell (green bg)
 Font=Terminus,11,-1,5,50,0,0,0,0,0
 
 [General]
