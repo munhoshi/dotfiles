@@ -1,4 +1,4 @@
-# songpixi's dotfiles
+# lumipixi's dotfiles
 These are my dotfiles. They are managed via a bare repo. Thanks to @durdn for the [excellent guide](https://www.atlassian.com/git/tutorials/dotfiles).
 
 ## Dependencies
