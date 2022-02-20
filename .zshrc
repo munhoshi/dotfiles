@@ -81,8 +81,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 fpath+=$HOME/.zshfunctions
-autoload remap
-autoload archwiki
 #autoload $fpath/*
 # export MANPATH="/usr/local/man:$MANPATH"
 
