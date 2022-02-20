@@ -2,7 +2,7 @@
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [user]
-	name = songpixi
-	email = 98211231+songpixi@users.noreply.github.com
+	name = lumipixi
+	email = 98211231+lumipixi@users.noreply.github.com
 [init]
 	defaultBranch = main
