@@ -114,7 +114,10 @@ alias pls="sudo"
 alias please="sudo"
 alias thanks="echo '$(echo $0 | grep -oE '[^/bin/].*'): You are welcome, $(whoami)! \\(^o^)/' | lolcat -F 0.55"
 
-# Utilities
+# Comfy and informative
+alias killall="killall -v"
+
+# Custom utilities
 alias clock="date +%r"
 alias dragon="dragon-drag-and-drop"
 alias recx11="ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 -f pulse -i 1  $1"

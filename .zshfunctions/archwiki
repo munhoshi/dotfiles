@@ -1,6 +1,0 @@
-query=$(printf '%s' "$*" | tr ' ' '+')
-
-#return first search result
-url=$(curl -s https://wiki.archlinux.org/index.php\?search\=$query\&title\=Special%3ASearch\&fulltext\=Search | grep -oE 'title\/.*(data-serp-pos="0)"' | head -n 1 | cut -f1 -d'"')
-printf "$url"
-lynx https://wiki.archlinux.org/$url
