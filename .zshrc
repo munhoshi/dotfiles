@@ -113,7 +113,12 @@ alias yt="ytfzf -t --detach"
 alias pls="sudo"
 alias please="sudo"
 alias thanks="echo '$(echo $0 | grep -oE '[^/bin/].*'): You are welcome, $(whoami)! \\(^o^)/' | lolcat -F 0.55"
+
+# Utilities
 alias clock="date +%r"
 alias dragon="dragon-drag-and-drop"
 alias recx11="ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 -f pulse -i 1  $1"
 alias recsnd="ffmpeg -f pulse -i 1 -map 0:a  $1"
+
+# Short dirs (no quotes!)
+mnt=/run/media/$(whoami)
