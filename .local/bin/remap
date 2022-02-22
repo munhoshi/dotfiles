@@ -1,4 +1,4 @@
-#!bin/sh
+#!/bin/sh
 # swaps esc and capslk, or reverts it
 # Eventually could take more arguments and work as a general remapper
 # First arg: key that will be mapped to another
