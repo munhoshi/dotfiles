@@ -122,6 +122,8 @@ alias clock="date +%r"
 alias dragon="dragon-drag-and-drop"
 alias recx11="ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 -f pulse -i 1  $1"
 alias recsnd="ffmpeg -f pulse -i 1 -map 0:a  $1"
+alias sshdconfig="sudo -E vim /etc/ssh/sshd_config"
+alias keyring-fix="sudo pacman -Sy archlinux-keyring manjaro-keyring && sudo pamac update && sudo pacman -Sy archlinux-keyring manjaro-keyring && sudo pacman -Sy archlinux-keyring manjaro-keyring"
 
 # Short dirs (no quotes!)
 mnt=/run/media/$(whoami)
