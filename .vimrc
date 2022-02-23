@@ -148,6 +148,8 @@ noremap <c-down> <c-w>-
 noremap <c-left> <c-w>>
 noremap <c-right> <c-w><
 
+nnoremap <silent> _ :nohl<CR>
+
 " NERDTree specific mappings.
 " Map the F3 key to toggle NERDTree open and close.
 nnoremap <F3> :NERDTreeToggle<cr>
