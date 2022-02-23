@@ -114,8 +114,9 @@ alias pls="sudo"
 alias please="sudo"
 alias thanks="echo '$(echo $0 | grep -oE '[^/bin/].*'): You are welcome, $(whoami)! \\(^o^)/' | lolcat -F 0.55"
 
-# Comfy and informative
+# Comfy aliases
 alias killall="killall -v"
+alias v="vim"
 
 # Custom utilities
 alias clock="date +%r"
