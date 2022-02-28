@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=Campbell (green bg)
+ColorScheme=Apu's
 Font=Terminus,11,-1,5,50,0,0,0,0,0
 
 [General]

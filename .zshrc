@@ -86,7 +86,7 @@ fpath+=$HOME/.zshfunctions
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-
+export EDITOR=/usr/bin/vim
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -108,22 +108,43 @@ fpath+=$HOME/.zshfunctions
 
 alias config='/usr/bin/git --git-dir=/home/pixi/.cfg/ --work-tree=/home/pixi'
 alias yt="ytfzf -t --detach"
+alias ytd="yt -dfs"
 
-# Fluffy stuff
+
+# Fluffy stuff :3
 alias pls="sudo"
 alias please="sudo"
 alias thanks="echo '$(echo $0 | grep -oE '[^/bin/].*'): You are welcome, $(whoami)! \\(^o^)/' | lolcat -F 0.55"
 
 # Comfy aliases
-alias killall="killall -v"
+## system
+
+alias update="sudo pamac update"
+alias install="sudo pamac install"
+
+alias myip="curl ipinfo.io/ip" 
+alias untar="tar -zxvf" 
+alias sha="shasum -a 256"
+alias lt="ls -h -s -S -1" # ls in one column, show sizes, sort by largest, human readable
+alias cp="cp -iv" # ask before overwrite, verbose"
+alias mv="mv -iv" # ask before overwrite, verbose"
+#alias vimv="export EDITOR=/usr/bin/vim && vimv"
+alias rm="rm -v" # ask before overwrite, verbose"
+
+alias g="git"
+alias ka="killall -v"
 alias v="vim"
+alias yt="ytfzf -t --detach" # watch youtube
+alias ytd="ytfzf -t -s -d -f" #--embed-subs --embed-thumbnail --embed-metadata" # download youtube
+alias anid="ani-cli -d"
+#alias yta"yt-dlp -x -f bestaudio/best"
 
 # Custom utilities
-alias clock="date +%r"
-alias dragon="dragon-drag-and-drop"
-alias recx11="ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 -f pulse -i 1  $1"
+alias clk="date +%r"
+alias drag="dragon-drag-and-drop"
+alias recx="ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 -f pulse -i 1  $1"
 alias recsnd="ffmpeg -f pulse -i 1 -map 0:a  $1"
-alias sshdconfig="sudo -E vim /etc/ssh/sshd_config"
+alias sshdcfg="sudo -E vim /etc/ssh/sshd_config"
 alias keyring-fix="sudo pacman -Sy archlinux-keyring manjaro-keyring && sudo pamac update && sudo pacman -Sy archlinux-keyring manjaro-keyring && sudo pacman -Sy archlinux-keyring manjaro-keyring"
 
 # Short dirs (no quotes!)
