@@ -87,6 +87,7 @@ fpath+=$HOME/.zshfunctions
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 export EDITOR=/usr/bin/vim
+test -r ~/.dir_colors && eval "$(dircolors -b ~/.dir_colors)" || eval "$(dircolors -b)"
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -125,6 +126,7 @@ alias install="sudo pamac install"
 alias myip="curl ipinfo.io/ip" 
 alias untar="tar -zxvf" 
 alias sha="shasum -a 256"
+alias du="du -h"
 alias lt="ls -h -s -S -1" # ls in one column, show sizes, sort by largest, human readable
 alias cp="cp -iv" # ask before overwrite, verbose"
 alias mv="mv -iv" # ask before overwrite, verbose"
@@ -137,7 +139,8 @@ alias v="vim"
 alias yt="ytfzf -t --detach" # watch youtube
 alias ytd="ytfzf -t -s -d -f" #--embed-subs --embed-thumbnail --embed-metadata" # download youtube
 alias anid="ani-cli -d"
-#alias yta"yt-dlp -x -f bestaudio/best"
+alias yta="yt-dlp -x -f bestaudio/best"
+alias yte="yt-dlp --embed-subs --embed-thumbnail --embed-metadata"
 
 # Custom utilities
 alias clk="date +%r"
