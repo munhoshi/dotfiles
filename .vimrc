@@ -132,7 +132,7 @@ vnoremap d "_d
 " <CR> (carriage return) is like pressing the enter key.
 " !clear runs the external clear screen command.
 " !python3 % executes the current file with Python.
-nnoremap <f5> :w <CR>:!clear <CR>:!python3 % <CR>
+" nnoremap <f5> :w <CR>:!clear <CR>:!python3 % <CR>
 
 " You can split the window in Vim by typing :split or :vsplit.
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
