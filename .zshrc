@@ -108,9 +108,6 @@ test -r ~/.dir_colors && eval "$(dircolors -b ~/.dir_colors)" || eval "$(dircolo
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias config='/usr/bin/git --git-dir=/home/pixi/.cfg/ --work-tree=/home/pixi'
-alias yt="ytfzf -t --detach"
-alias ytd="yt -dfs"
-
 
 # Fluffy stuff :3
 alias pls="sudo"
@@ -138,6 +135,7 @@ alias ka="killall -v"
 alias v="vim"
 alias yt="ytfzf -t --detach" # watch youtube
 alias ytd="ytfzf -t -s -d -f" #--embed-subs --embed-thumbnail --embed-metadata" # download youtube
+alias ytl="ytfzf -t -L" # copy youtube link 
 alias anid="ani-cli -d"
 alias yta="yt-dlp -x -f bestaudio/best"
 alias yte="yt-dlp --embed-subs --embed-thumbnail --embed-metadata"
