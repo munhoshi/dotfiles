@@ -107,7 +107,7 @@ test -r ~/.dir_colors && eval "$(dircolors -b ~/.dir_colors)" || eval "$(dircolo
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias config='/usr/bin/git --git-dir=/home/pixi/.cfg/ --work-tree=/home/pixi'
+alias conf='/usr/bin/git --git-dir=/home/pixi/.cfg/ --work-tree=/home/pixi'
 
 # Fluffy stuff :3
 alias pls="sudo"
