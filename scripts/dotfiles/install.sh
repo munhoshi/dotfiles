@@ -1,5 +1,6 @@
 #!/bin/sh
 
+echo "Cloning dotfiles..."
 git clone --bare https://github.com/lumipixi/dotfiles.git $HOME/.cfg
 echo ".cfg" >> .gitignore
 
@@ -10,4 +11,4 @@ function conf {
 conf checkout -f
 conf config status.showUntrackedFiles no
 
-echo "Please reload the shell"
+echo "Done! Please reload the shell"
