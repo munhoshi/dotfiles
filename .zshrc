@@ -80,7 +80,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-fpath+=$HOME/.zshfunctions
+#fpath+=$HOME/.zshfunctions
 #autoload $fpath/*
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -106,47 +106,4 @@ test -r ~/.dir_colors && eval "$(dircolors -b ~/.dir_colors)" || eval "$(dircolo
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias conf='/usr/bin/git --git-dir=/home/pixi/.cfg/ --work-tree=/home/pixi'
-
-# Fluffy stuff :3
-alias pls="sudo"
-alias please="sudo"
-alias thanks="echo '$(echo $0 | grep -oE '[^/bin/].*'): You are welcome, $(whoami)! \\(^o^)/' | lolcat -F 0.55"
-
-# Comfy aliases
-## system
-
-alias update="sudo pamac update"
-alias install="sudo pamac install"
-
-alias myip="curl ipinfo.io/ip" 
-alias untar="tar -zxvf" 
-alias sha="shasum -a 256"
-alias du="du -h"
-alias lt="ls -h -s -S -1" # ls in one column, show sizes, sort by largest, human readable
-alias cp="cp -iv" # ask before overwrite, verbose"
-alias mv="mv -iv" # ask before overwrite, verbose"
-#alias vimv="export EDITOR=/usr/bin/vim && vimv"
-alias rm="rm -v" # ask before overwrite, verbose"
-
-alias g="git"
-alias ka="killall -v"
-alias v="vim"
-alias yt="ytfzf -t --detach" # watch youtube
-alias ytd="ytfzf -t -s -d -f" #--embed-subs --embed-thumbnail --embed-metadata" # download youtube
-alias ytl="ytfzf -t -L" # copy youtube link 
-alias anid="ani-cli -d"
-alias yta="yt-dlp -x -f bestaudio/best"
-alias yte="yt-dlp --embed-subs --embed-thumbnail --embed-metadata"
-
-# Custom utilities
-alias clk="date +%r"
-alias drag="dragon-drag-and-drop"
-alias recx="ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 -f pulse -i 1  $1"
-alias recsnd="ffmpeg -f pulse -i 1 -map 0:a  $1"
-alias sshdcfg="sudo -E vim /etc/ssh/sshd_config"
-alias keyring-fix="sudo pacman -Sy archlinux-keyring manjaro-keyring && sudo pamac update && sudo pacman -Sy archlinux-keyring manjaro-keyring && sudo pacman -Sy archlinux-keyring manjaro-keyring"
-
-# Short dirs (no quotes!)
-mnt=/run/media/$(whoami)
+source ~/.alias
