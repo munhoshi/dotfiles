@@ -22,6 +22,8 @@ alias untar="tar -zxvf"
 alias clk="date +%r"
 alias myip="curl ipinfo.io/ip" 
 alias sshdcfg="sudo -E vim /etc/ssh/sshd_config"
+alias www="lynx duckduckgo.com/?q=$1"
+alias batt="cat /sys/class/power_supply/BAT0/capacity"
 
 # Media aliases
 alias yt="ytfzf -t --detach" # watch youtube
