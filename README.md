@@ -17,16 +17,3 @@ At this point, it's a good idea to re-login to activate the new dotfiles and ali
 ```
 echo "alias ALIAS_YOU_WANT='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.zshrc
 ```
-
-## Application specific settings
-### Konsole and Yakuake
-You can find custom profiles and color schemes in `.local/share/konsole/`.
-
-* **Desktop.profile** - Terminus font, scrollback size: 1000 lines.
-* **Laptop.profile** - DejaVu Sans Mono font, scrollback size: 500 lines due to limited memory.
-
-To use them, quit any open Konsole or Yakuake instances, then:
-1. Open Konsole or Yakuake and go to **Settings > Manage Profiles**. Yakuake has hamburger menu Settings.
-2. Highlight the desired profile and click **Set as Default**, then **OK** to exit the dialog.
-3. Activate Konsole: **Settings > Switch Profile > desired profile**.
-4. Activate Yakuake: **Settings > Quit**, then reopen.
