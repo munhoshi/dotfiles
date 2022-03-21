@@ -16,6 +16,7 @@ alias df="df -h"
 alias ka="killall -v"
 alias g="git"
 alias v="vim"
+alias sv="sudo -v; sudo -E vim "
 alias sha="shasum -a 256"
 alias untar="tar -zxvf" 
 
