@@ -83,7 +83,7 @@ source $ZSH/oh-my-zsh.sh
 #fpath+=$HOME/.zshfunctions
 #autoload $fpath/*
 # export MANPATH="/usr/local/man:$MANPATH"
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/scripts:$PATH
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
