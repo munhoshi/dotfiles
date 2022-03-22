@@ -1,0 +1,7 @@
+#!/bin/sh
+file=$1
+ext=$(echo $1 | cut -d . -f 2)
+cp -v "$file" ~/
+mv -v ~/"$file" ~/wall.$ext
+xwallpaper --maximize ~/wall.$ext
+cowsay "Your wallpaper has been updated!" | lolcat
