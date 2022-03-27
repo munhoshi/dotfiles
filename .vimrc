@@ -122,6 +122,10 @@ nnoremap N Nzz
 " Yank from cursor to the end of line.
 nnoremap Y y$
 
+" Yank and paste to system clipboard and primary selection
+vnoremap <C-c> "*y :let @+=@*<CR>
+map <C-P> "+P
+
 " Disable dd cutting behavior by mapping it to the black hole register.
 nnoremap d "_d
 vnoremap d "_d
