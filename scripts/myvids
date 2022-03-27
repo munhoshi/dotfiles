@@ -1,4 +1,4 @@
 #!/bin/sh
-find ~/Videos/ -type f -iname '*.mp4' -o -iname '*.webm' -o -iname '*.mkv' | sort | dmenu -i -l 30 | xargs -I {} mpv --fs {}
+find ~/Videos/ -type f -iname '*.mp4' -o -iname '*.webm' -o -iname '*.mkv' | sort | dmenu -i -l 30 | xargs -I {} mpv {} --fs & disown 
 #du -a ~/Videos/ | cut -f2- | grep -e mp4 -e mkv | sort | dmenu -i -l 30 | while read video; do mpv "$video"; done
 #du -a ~/Videos/ | cut -f2- | grep -e mp4 -e mkv | sort | fzf | while read video; do mpv "$video"; done
