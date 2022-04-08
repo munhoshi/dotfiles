@@ -6,3 +6,5 @@
 	email = 98211231+lumipixi@users.noreply.github.com
 [init]
 	defaultBranch = main
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cD) %C(bold blue)<%an>%Creset' --abbrev-commit
