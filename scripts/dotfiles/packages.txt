@@ -1,1 +1,1 @@
-vim neofetch lolcat cowsay ytfzf mpv yt-dlp signal-desktop spotify frozen-bubble kvantum imagewriter visual-studio-code-bin ani-cli trash-cli sxiv lynx barrier aseprite aria2 xwallpaper
+vim neofetch lolcat cowsay ytfzf mpv yt-dlp signal-desktop spotify frozen-bubble kvantum imagewriter visual-studio-code-bin ani-cli trash-cli sxiv lynx barrier aseprite-bin aria2 xwallpaper
