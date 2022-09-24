@@ -1,1 +1,1 @@
-falkon-pdfreader-git jq fzf ueberzug
+jq fzf ueberzug
