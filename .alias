@@ -1,7 +1,7 @@
 # Dotfile management
 alias conf='git --git-dir=/home/pixi/.cfg/ --work-tree=/home/pixi'
 
-# Fluffy commands <3
+# Fluffy commands ^-^
 alias pls="sudo -v; sudo "
 alias please="pls"
 alias thanks="echo 'You are welcome, $(whoami)! \\(^o^)/' | lolcat -F 0.55"
@@ -24,8 +24,7 @@ alias untar="tar -zxvf"
 alias clk="date +%r"
 alias myip="curl ipinfo.io/ip" 
 alias sshdcfg="sudo -E vim /etc/ssh/sshd_config"
-alias www="lynx duckduckgo.com/?q=$1"
-alias batt="cat /sys/class/power_supply/BAT0/capacity"
+alias batt="cat /sys/class/power_supply/BAT0/capacity" # works in arch
 
 # Media aliases
 alias yt="ytfzf -t --detach" # watch youtube
@@ -33,14 +32,16 @@ alias ytd="ytfzf -t -s -d -f" #--embed-subs --embed-thumbnail --embed-metadata" 
 alias ytl="ytfzf -t -L" # copy youtube link 
 alias anid="ani-cli -d"
 alias yta="yt-dlp -x -f bestaudio/best"
-alias yte="yt-dlp --embed-subs --embed-thumbnail --embed-metadata"
 
 # Recording / conversion aliases
 alias recx="ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 -f pulse -i 1  $1"
 alias recsnd="ffmpeg -f pulse -i 1 -map 0:a  $1"
 
 # Commands that do something in X
-alias drag="dragon-drag-and-drop -x"
+# empty for now unless I start using dwm or something
+
+# Ruby stuff
+alias irb="irb --readline"
 
 # Short dirs (no quotes!)
 mnt=/run/media/$(whoami)
