@@ -83,6 +83,7 @@ call plug#begin('~/.vim/plugged')
   "Plug 'dense-analysis/ale'
 
   Plug 'preservim/nerdtree'
+  Plug 'mattn/emmet-vim'
 
 call plug#end()
 
@@ -163,6 +164,8 @@ let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', 
 
 " }}}
 
+let g:user_emmet_mode='n'
+let g:user_emmet_leader_key=","
 
 " VIMSCRIPT -------------------------------------------------------------- {{{
 
