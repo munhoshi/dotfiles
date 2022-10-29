@@ -1,5 +1,5 @@
 # Dotfile management
-alias conf='git --git-dir=/home/pixi/.cfg/ --work-tree=/home/pixi'
+alias conf='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # Fluffy commands ^-^
 alias pls="sudo -v; sudo "
