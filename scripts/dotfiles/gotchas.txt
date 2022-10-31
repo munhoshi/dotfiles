@@ -1,0 +1,2 @@
+Needed for installing ueberzug via pip:
+    sudo apt-get install libx11-dev libxtst-dev python3-docopt python3-xlib python3-pil python3-attr
