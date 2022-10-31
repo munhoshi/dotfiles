@@ -19,6 +19,8 @@ alias v="vim"
 alias sv="sudo -v; sudo -E vim "
 alias sha="shasum -a 256"
 alias untar="tar -zxvf" 
+alias ls="exa -lah --color=always --group-directories-first"
+alias fn="find | grep --ignore-case"
 
 # Misc shell utilities
 alias clk="date +%r"
