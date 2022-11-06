@@ -269,11 +269,15 @@ globalkeys = gears.table.join(
               myscreen = awful.screen.focused()
               myscreen.mywibox.visible = not myscreen.mywibox.visible
           end,
-              -- function () mywibox.visible = not mywibox.visible end,
               {description = "toggle wibox visibility", group = "awesome"}),
     awful.key({ "Control", "Mod1"}, "l", function () awful.util.spawn("slock") end,
               {description = "Lock the screen", group = "awesome"}),
-
+    awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%") end,
+              {description = "raise volume by 5%", group = "media"}),
+    awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%") end,
+              {description = "lower volume by 5%", group = "media"}),
+    awful.key({}, "XF86AudioMute", function () awful.util.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle") end,
+              {description = "mute", group = "media"}),
 
 
     awful.key({ modkey,           }, "j",
