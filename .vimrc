@@ -13,9 +13,6 @@ filetype indent on
 " Turn syntax highlighting on.
 syntax on
 
-" Enable custom colors
-set termguicolors
-
 " Add numbers to each line on the left-hand side.
 set number
 
@@ -293,5 +290,12 @@ nnoremap <A-K> yyP
 " }}}
 "
 "
-" SET COLORSCHEME
-colorscheme catppuccin_mocha
+" AESTHETICS ------------------------------------------------------------ {{{
+if $TERM == 'linux'
+    colorscheme pablo
+elseif (has("termguicolors"))
+	set termguicolors
+    colorscheme catppuccin_mocha
+endif
+
+" }}}
