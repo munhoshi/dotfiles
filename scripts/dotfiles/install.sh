@@ -8,3 +8,4 @@ git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout -f
 git --git-dir=$HOME/.cfg/ --work-tree=$HOME config status.showUntrackedFiles no
 
 echo "Done! Please reload the shell"
+echo "You should probably install rustup, and then exa and bat..."
