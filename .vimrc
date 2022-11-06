@@ -13,6 +13,9 @@ filetype indent on
 " Turn syntax highlighting on.
 syntax on
 
+" Enable custom colors
+set termguicolors
+
 " Add numbers to each line on the left-hand side.
 set number
 
@@ -84,20 +87,23 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'preservim/nerdtree'
   Plug 'mattn/emmet-vim'
-
+  Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+  Plug 'alvan/vim-closetag'
+  Plug 'junegunn/rainbow_parentheses.vim'
+  Plug 'ThePrimeagen/vim-be-good'
 call plug#end()
-
 
 " }}}
 
 
 " MAPPINGS --------------------------------------------------------------- {{{
 
-" Set the backslash as the leader key.
-let mapleader = "\""
+" Show leader key during timeout (bottom right corner)
+set showcmd
 
 " Press \\ to jump back to the last cursor position.
-nnoremap <leader>\ ``
+" nnoremap <leader>\ ``
+nnoremap <leader>\ :nohl<CR>
 
 " Press \p to print the current file to the default printer from a Linux operating system.
 " View available printers:   lpstat -v
@@ -152,8 +158,6 @@ noremap <c-up> <c-w>+
 noremap <c-down> <c-w>-
 noremap <c-left> <c-w>>
 noremap <c-right> <c-w><
-
-nnoremap <silent> _ :nohl<CR>
 
 " NERDTree specific mappings.
 " Map the F3 key to toggle NERDTree open and close.
@@ -269,3 +273,25 @@ set laststatus=2
 " %p%% – Show the cursor percentage from the top of the file.
 
 " }}}
+
+
+" VSCODE-LIKE ------------------------------------------------------------ {{{
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+nnoremap <A-J> yyp
+nnoremap <A-K> yyP
+"
+" To mimic Ctrl+D:
+" 1. /search for word and type cgn (Change Go to Next)
+" 2. exit insert mode
+" 3. press . (period). This repeats step 1's command (changes the current
+" find, goes to the next) for every instance.
+"
+"
+" }}}
+"
+"
+" SET COLORSCHEME
+colorscheme catppuccin_mocha
