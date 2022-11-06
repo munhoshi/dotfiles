@@ -257,8 +257,13 @@ globalkeys = gears.table.join(
               {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
+              
+              
+    -- Some custom keybindings
     awful.key({ "Control", "Shift"}, "space", function () awful.util.spawn("flameshot gui") end,
               {description = "Take screenshot with Flameshot", group = "client"}),
+    awful.key({ "Control", "Mod1"}, "l", function () awful.util.spawn("slock") end,
+              {description = "Lock the screen", group = "awesome"}),
     awful.key({ modkey },            "o",
           function ()
               myscreen = awful.screen.focused()
@@ -266,6 +271,10 @@ globalkeys = gears.table.join(
           end,
               -- function () mywibox.visible = not mywibox.visible end,
               {description = "toggle wibox visibility", group = "awesome"}),
+    awful.key({ "Control", "Mod1"}, "l", function () awful.util.spawn("slock") end,
+              {description = "Lock the screen", group = "awesome"}),
+
+
 
     awful.key({ modkey,           }, "j",
         function ()
