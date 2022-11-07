@@ -16,14 +16,16 @@ syntax on
 " Add numbers to each line on the left-hand side.
 set number
 
-" Set shift width to 4 spaces.
-set shiftwidth=4
+" Set shift width to 2 spaces.
+set shiftwidth=2
 
-" Set tab width to 4 columns.
-set tabstop=4
+" Set tab width to 2 columns.
+set tabstop=2
+set softtabstop=4
 
 " Use space characters instead of tabs.
 set expandtab
+set smartindent
 
 " Do not save backup files.
 set nobackup
@@ -69,7 +71,7 @@ set wildmode=list:longest
 " Wildmenu will ignore files with these extensions.
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
-" Enable relative line numbers while Insert mode is active. 
+" Enable absolute line numbers while Insert mode is active. 
 augroup numbertoggle
   autocmd!
   autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
@@ -80,18 +82,121 @@ augroup END
 
 call plug#begin('~/.vim/plugged')
 
-  "Plug 'dense-analysis/ale'
-
+  " Features
   Plug 'preservim/nerdtree'
-  Plug 'mattn/emmet-vim'
+  " Aesthetics
   Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+  Plug 'ThePrimeagen/vim-be-good'
+  " IDE stuff
+  Plug 'mattn/emmet-vim'
   Plug 'alvan/vim-closetag'
   Plug 'junegunn/rainbow_parentheses.vim'
-  Plug 'ThePrimeagen/vim-be-good'
+  " IDE Stuff !!WITH DEPENDENCIES!!
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 call plug#end()
 
 " }}}
 
+" COC / EMMET / HEXOKINASE ---------------------------------------------------------------- {{{
+
+" ALL OF THIS CAN BE DISABLED IF NOT DEVELOPING!
+let g:user_emmet_mode='n'
+let g:user_emmet_leader_key=","
+
+let g:Hexokinase_highlighters = ['backgroundfull']
+
+let g:coc_global_extensions = [
+  \ 'coc-html',
+  \ 'coc-html-css-support',
+  \ 'coc-css',
+  \ 'coc-cssmodules',
+  \ 'coc-json',
+  \ 'coc-prettier',
+  \ 'coc-python',
+  \ 'coc-rust-analyzer',
+  \ 'coc-sh',
+  \ 'coc-tsserver',
+  \  ]
+
+" Run Prettier
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
+nnoremap <leader>f :Prettier<CR>
+
+" May need for vim (not neovim) since coc.nvim calculate byte offset by count
+" utf-8 byte sequence.
+set encoding=utf-8
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+set signcolumn=yes
+
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: There's always complete item selected by default, you may want to enable
+" no select by `"suggest.noselect": true` in your configuration file.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice.
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Remap <C-f> and <C-b> for scroll float windows/popups.
+if has('nvim-0.4.0') || has('patch-8.2.0750')
+  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+endif
+
+" }}}
 
 " MAPPINGS --------------------------------------------------------------- {{{
 
@@ -165,8 +270,6 @@ let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', 
 
 " }}}
 
-let g:user_emmet_mode='n'
-let g:user_emmet_leader_key=","
 
 " VIMSCRIPT -------------------------------------------------------------- {{{
 
@@ -182,7 +285,7 @@ augroup filetype_vim
 augroup END
 
 " If the current file type is HTML, set indentation to 2 spaces.
-autocmd Filetype html setlocal tabstop=2 shiftwidth=2 expandtab
+" autocmd Filetype html setlocal tabstop=2 shiftwidth=2 expandtab
 
 " If Vim version is equal to or greater than 7.3 enable undofile.
 " This allows you to undo changes to a file even after saving it.
@@ -204,14 +307,14 @@ endif
 if has('gui_running')
 
     " Set the background tone.
-    set background=dark
+    set background=light
 
     " Set the color scheme.
-    colorscheme molokai
+    colorscheme peachfuzz
 
     " Set a custom font you have installed on your computer.
     " Syntax: set guifont=<font_name>\ <font_weight>\ <size>
-    set guifont=Terminus\ Regular\ 11
+    set guifont=Monospace
 
     " Display more of the file by default.
     " Hide the toolbar.
@@ -288,14 +391,14 @@ nnoremap <A-K> yyP
 "
 "
 " }}}
-"
-"
+
+
 " AESTHETICS ------------------------------------------------------------ {{{
 if $TERM == 'linux'
     colorscheme pablo
 elseif (has("termguicolors"))
 	set termguicolors
-    colorscheme catppuccin_mocha
+    colorscheme catppuccin_latte
 endif
 
 " }}}
