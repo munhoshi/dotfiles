@@ -82,18 +82,20 @@ augroup END
 
 call plug#begin('~/.vim/plugged')
 
-  " Features
+  " QOL Features
   Plug 'preservim/nerdtree'
+  Plug 'tpope/vim-fugitive'
+  Plug 'alvan/vim-closetag'
   " Aesthetics
   Plug 'catppuccin/vim', { 'as': 'catppuccin' }
-  Plug 'ThePrimeagen/vim-be-good'
   " IDE stuff
   Plug 'mattn/emmet-vim'
-  Plug 'alvan/vim-closetag'
   Plug 'junegunn/rainbow_parentheses.vim'
   " IDE Stuff !!WITH DEPENDENCIES!!
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+  " Plug 'ThePrimeagen/vim-be-good'
+
 call plug#end()
 
 " }}}
