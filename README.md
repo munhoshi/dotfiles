@@ -8,7 +8,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ```
 **Other recommended software:**
 ```
-kitty neovim slock dmenu ranger
+kitty neovim slock dmenu ranger urlscan
 rustup exa bat
 ```
 
