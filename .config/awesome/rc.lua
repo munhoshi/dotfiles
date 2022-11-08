@@ -55,6 +55,7 @@ beautiful.init(theme_path)
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
+--terminal = "kitty"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -262,7 +263,7 @@ globalkeys = gears.table.join(
     -- Some custom keybindings
     awful.key({ "Control", "Shift"}, "space", function () awful.util.spawn("flameshot gui") end,
               {description = "Take screenshot with Flameshot", group = "client"}),
-    awful.key({ "Control", "Mod1"}, "l", function () awful.util.spawn("slock") end,
+    awful.key({ modkey,  "Control"}, "l", function () awful.util.spawn("slock") end,
               {description = "Lock the screen", group = "awesome"}),
     awful.key({ modkey },            "o",
           function ()
@@ -270,8 +271,6 @@ globalkeys = gears.table.join(
               myscreen.mywibox.visible = not myscreen.mywibox.visible
           end,
               {description = "toggle wibox visibility", group = "awesome"}),
-    awful.key({ "Control", "Mod1"}, "l", function () awful.util.spawn("slock") end,
-              {description = "Lock the screen", group = "awesome"}),
     awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%") end,
               {description = "raise volume by 5%", group = "media"}),
     awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%") end,
