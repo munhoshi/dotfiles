@@ -6,6 +6,11 @@ Zsh should be installed and set as the default shell. Oh My Zsh! is ideal.
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+**Other recommended software:**
+```
+kitty neovim slock dmenu ranger
+rustup exa bat
+```
 
 ## Setup
 Run the install script to clone the bare repo to the $HOME/.cfg/. The script will automatically checkout the files. Reload the shell and enjoy!
