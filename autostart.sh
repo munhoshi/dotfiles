@@ -8,6 +8,6 @@ function run {
 }
 
 nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
-picom --experimental-backends -b
+picom --no-fading-openclose --experimental-backends -b
 nitrogen --restore
 setxkbmap -layout "us,latam" -option "grp:alt_shift_toggle"
