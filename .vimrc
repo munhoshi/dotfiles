@@ -85,16 +85,18 @@ call plug#begin('~/.vim/plugged')
   " QOL Features
   Plug 'preservim/nerdtree'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-commentary'
   Plug 'alvan/vim-closetag'
+  Plug 'ap/vim-css-color'
   " Aesthetics
   Plug 'catppuccin/vim', { 'as': 'catppuccin' }
   " IDE stuff
   Plug 'mattn/emmet-vim'
-  Plug 'junegunn/rainbow_parentheses.vim'
+  Plug 'tpope/vim-surround'
   " IDE Stuff !!WITH DEPENDENCIES!!
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-  " Plug 'ThePrimeagen/vim-be-good'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'} "NEEDS NODE
+  " Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' } #NEEDS GO
+  " Plug 'ThePrimeagen/vim-be-good' #NEEDS NVIM
 
 call plug#end()
 
