@@ -252,8 +252,8 @@ vnoremap d "_d
 " nnoremap <f5> :w <CR>:!clear <CR>:!python3 % <CR>
 
 " You can split the window in Vim by typing :split or :vsplit.
-nnoremap <leader>v :vsplit<CR>
-nnoremap <leader>h :split<CR>
+nnoremap sv :vsplit<CR>
+nnoremap ss :split<CR>
 
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
 nnoremap <c-j> <c-w>j
