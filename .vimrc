@@ -252,6 +252,9 @@ vnoremap d "_d
 " nnoremap <f5> :w <CR>:!clear <CR>:!python3 % <CR>
 
 " You can split the window in Vim by typing :split or :vsplit.
+nnoremap <leader>v :vsplit<CR>
+nnoremap <leader>h :split<CR>
+
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -270,7 +273,7 @@ noremap <c-right> <c-w><
 nnoremap <F3> :NERDTreeToggle<cr>
 
 " Have nerdtree ignore certain files and directories.
-let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', '\.pyc$', '\.odt$', '\.png$', '\.gif$', '\.db$']
+" let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', '\.pyc$', '\.odt$', '\.png$', '\.gif$', '\.db$']
 
 " }}}
 
@@ -384,8 +387,6 @@ nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
-nnoremap <A-J> yyp
-nnoremap <A-K> yyP
 "
 " To mimic Ctrl+D:
 " 1. /search for word and type cgn (Change Go to Next)
