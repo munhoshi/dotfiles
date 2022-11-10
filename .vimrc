@@ -387,6 +387,8 @@ nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+nnoremap <C-A-j> yyp
+nnoremap <C-A-k> yyP
 "
 " To mimic Ctrl+D:
 " 1. /search for word and type cgn (Change Go to Next)
