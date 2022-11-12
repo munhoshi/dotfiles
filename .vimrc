@@ -95,7 +95,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   " IDE Stuff !!WITH DEPENDENCIES!!
   Plug 'neoclide/coc.nvim', {'branch': 'release'} "NEEDS NODE
-  " Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' } #NEEDS GO
+  "Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' } "NEEDS GO
   " Plug 'ThePrimeagen/vim-be-good' #NEEDS NVIM
 
 call plug#end()
@@ -115,12 +115,15 @@ let g:coc_global_extensions = [
   \ 'coc-html-css-support',
   \ 'coc-css',
   \ 'coc-cssmodules',
+  \ 'coc-eslint',
   \ 'coc-json',
   \ 'coc-prettier',
   \ 'coc-python',
   \ 'coc-rust-analyzer',
   \ 'coc-sh',
+  \ 'coc-snippets',
   \ 'coc-tsserver',
+  \ 'coc-vimlsp',
   \  ]
 
 " Run Prettier
@@ -185,7 +188,7 @@ function! ShowDocumentation()
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
+" autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
@@ -252,8 +255,8 @@ vnoremap d "_d
 " nnoremap <f5> :w <CR>:!clear <CR>:!python3 % <CR>
 
 " You can split the window in Vim by typing :split or :vsplit.
-nnoremap sv :vsplit<CR>
-nnoremap ss :split<CR>
+nnoremap <leader>v :vsplit<CR>
+nnoremap <leader>s :split<CR>
 
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
 nnoremap <c-j> <c-w>j
@@ -405,7 +408,7 @@ if $TERM == 'linux'
     colorscheme pablo
 elseif (has("termguicolors"))
 	set termguicolors
-    colorscheme catppuccin_latte
+    colorscheme catppuccin_mocha
 endif
 
 " }}}
