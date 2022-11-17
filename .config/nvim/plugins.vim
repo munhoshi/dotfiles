@@ -33,5 +33,6 @@ Plug 'ThePrimeagen/vim-be-good' "needs nvim
 
 " Themes
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+Plug 'morhetz/gruvbox'
 
 call plug#end()

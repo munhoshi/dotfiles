@@ -1,10 +1,9 @@
 # Dotfile management
 alias conf='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-# Fluffy commands ^-^
+# Hehehe
 alias pls="sudo -v; sudo "
 alias please="pls"
-alias thanks="echo 'You are welcome, $(whoami)! \\(^o^)/' | lolcat -F 0.55"
 
 # Convenient shell aliases
 alias cp="cp -iv" # ask before overwrite, verbose"
@@ -15,8 +14,8 @@ alias du="du -h"
 alias df="df -h"
 alias ka="killall -v"
 alias g="git"
-alias v="vim"
-alias sv="sudo -v; sudo -E vim "
+alias v="nvim"
+alias sv="sudo -v; sudo -E nvim "
 alias sha="shasum -a 256"
 alias untar="tar -zxvf" 
 alias l="exa -lh --color=always --group-directories-first"
@@ -26,7 +25,7 @@ alias fn="find | grep --ignore-case"
 # Misc shell utilities
 alias clk="date +%r"
 alias myip="curl ipinfo.io/ip" 
-alias sshdcfg="sudo -E vim /etc/ssh/sshd_config"
+alias sshdcfg="sudo -E nvim /etc/ssh/sshd_config"
 alias batt="cat /sys/class/power_supply/BAT0/capacity" # works in arch
 
 # Media aliases

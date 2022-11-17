@@ -107,7 +107,7 @@ if $TERM == 'linux'
     colorscheme pablo
 elseif (has("termguicolors"))
 	set termguicolors
-    colorscheme catppuccin_latte        " theme goes here!
+    autocmd vimenter * ++nested colorscheme gruvbox
 endif
 
 " }}}
