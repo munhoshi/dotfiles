@@ -8,3 +8,4 @@
 	defaultBranch = main
 [alias]
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cD) %C(bold blue)<%an>%Creset' --abbrev-commit
+  tracked = ls-tree -r main --name-only #TODO: add a way to reference the current branch
