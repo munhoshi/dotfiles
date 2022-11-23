@@ -8,6 +8,7 @@ Plug 'LunarWatcher/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
 
 " navigation
 "Plug 'tpope/vim-fugitive'
