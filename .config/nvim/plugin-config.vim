@@ -10,13 +10,13 @@ let g:coc_global_extensions = [
   \ 'coc-eslint',
   \ 'coc-json',
   \ 'coc-prettier',
-  \ 'coc-python',
-  \ 'coc-rust-analyzer',
   \ 'coc-sh',
-  \ 'coc-snippets',
   \ 'coc-tsserver',
-  \ 'coc-vimlsp',
   \  ]
+" \ 'coc-python',
+" \ 'coc-rust-analyzer',
+" \ 'coc-snippets',
+" \ 'coc-vimlsp',
 
 " Prettier command (mapping is in mappings.vim)
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument

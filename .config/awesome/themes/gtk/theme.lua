@@ -124,10 +124,10 @@ theme.border_normal = theme.gtk.wm_border_unfocused_color
 theme.border_focus  = theme.gtk.wm_border_focused_color
 theme.border_marked = theme.gtk.success_color
 
-theme.border_width  = dpi(2 or theme.gtk.button_border_width or 1)
+theme.border_width  = dpi(3 or theme.gtk.button_border_width or 1)
 theme.border_radius = theme.gtk.button_border_radius
 
-theme.useless_gap   = dpi(1)
+theme.useless_gap   = dpi(4)
 
 local rounded_rect_shape = function(cr,w,h)
     gears_shape.rounded_rect(
