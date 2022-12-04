@@ -24,6 +24,11 @@ nnoremap <leader>p :Prettier<CR>
 nnoremap o o<esc>
 nnoremap O O<esc>
 
+" Center the cursor vertically when moving pages up and down
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+
 " Center the cursor vertically when moving to the next word during a search.
 nnoremap n nzz
 nnoremap N Nzz
