@@ -1,6 +1,6 @@
 " ALL OF THIS CAN BE DISABLED IF NOT DEVELOPING!
 let g:user_emmet_mode='n'
-let g:user_emmet_leader_key=","
+let g:user_emmet_leader_key="<leader>,"
 
 let g:coc_global_extensions = [
   \ 'coc-html',
