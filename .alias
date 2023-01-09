@@ -20,7 +20,7 @@ alias sha="shasum -a 256"
 alias untar="tar -zxvf" 
 alias l="exa -lh --color=always --group-directories-first"
 alias la="exa -lah --color=always --group-directories-first"
-alias fn="find | grep --ignore-case"
+alias fn="find | rg --ignore-case"
 
 # Misc shell utilities
 alias clk="date +%r"
