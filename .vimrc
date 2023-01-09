@@ -7,6 +7,9 @@ filetype indent on        " Load an indent file for the detected file type.
 
 syntax on                 " Turn syntax highlighting on.
 set wrap                  " Do not wrap lines.
+let g:vim_json_conceal=0
+let g:markdown_syntax_conceal=0
+
 
 set shiftwidth=2          " Set shift width to 2 spaces.
 set tabstop=2             " Set tab width to 2 columns.
@@ -14,6 +17,7 @@ set softtabstop=4
 set expandtab             " Use space characters instead of tabs.
 set smartindent
 set clipboard^=unnamed,unnamedplus
+set conceallevel=0
 
 set nobackup              " Do not save backup files.
 set scrolloff=10          " Do not let cursor scroll below or above N number of lines when scrolling.
@@ -107,8 +111,8 @@ if $TERM == 'linux'
     colorscheme pablo
 elseif (has("termguicolors"))
 	set termguicolors
-  autocmd vimenter * ++nested colorscheme catppuccin_latte
-  let g:lightline = {'colorscheme': 'catppuccin_latte'}
+  autocmd vimenter * ++nested colorscheme catppuccin_frappe
+  let g:lightline = {'colorscheme': 'catppuccin_frappe'}
 endif
 
 " }}}
