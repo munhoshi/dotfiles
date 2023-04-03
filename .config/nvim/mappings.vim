@@ -28,7 +28,6 @@ nnoremap O O<esc>
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 
-
 " Center the cursor vertically when moving to the next word during a search.
 nnoremap n nzz
 nnoremap N Nzz
@@ -68,6 +67,9 @@ noremap <c-up> <c-w>+
 noremap <c-down> <c-w>-
 noremap <c-left> <c-w>>
 noremap <c-right> <c-w><
+
+" Escape terminal mode by just pressing Esc
+:tnoremap <Esc> <C-\><C-n>
 
 " NERDTree specific mappings.
 " Map the F3 key to toggle NERDTree open and close.
