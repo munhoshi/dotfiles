@@ -17,7 +17,7 @@ nnoremap <space> :
 " Plugin mappings
 map <leader>b :Buffers<cr>
 map <leader>f :Files<CR>
-map <leader>r :Rg<CR>
+map <leader>g :Rg<CR>
 nnoremap <leader>p :Prettier<CR>
 " Pressing the letter o will open a new line below the current one.
 " Exit insert mode after creating a new line above or below the current line.

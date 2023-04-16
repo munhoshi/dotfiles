@@ -1,0 +1,103 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]
+  then
+    echo "Please provide a project name"
+    exit 1
+fi
+
+project_name=$1
+
+# Create project folder
+mkdir $project_name
+
+# Add template files with here documents
+cat << EOF > $project_name/.eslintrc.json
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["airbnb-base", "prettier"],
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": "off",
+    "no-alert": "off",
+    "no-unused-expressions":"off"
+  }
+}
+EOF
+
+cat << EOF > $project_name/.eslintignore
+node_modules
+dist
+EOF
+
+cat << EOF > $project_name/.gitignore
+node_modules
+stories
+dist/*
+!dist/index.html
+notes.md
+EOF
+
+cat << EOF > $project_name/webpack.config.js
+const path = require("path");
+
+module.exports = {
+  mode: "development",
+  entry: {
+    index: "./src/index.js",
+  },
+  output: {
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist"),
+  },
+  devtool: "inline-source-map",
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
+      {
+        test: /\.(?:js|mjs|cjs)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [["@babel/preset-env", { targets: "defaults" }]],
+          },
+        },
+      },
+    ],
+  },
+};
+EOF
+
+# Initialize package.json and install dependencies
+cd $project_name
+npm init -y
+npm install --save-dev webpack webpack-cli style-loader css-loader @babel/core @babel/preset-env babel-loader eslint eslint-plugin-import eslint-config-airbnb-base eslint-config-prettier
+npm install @picocss/pico
+
+# Create boilerplate files
+mkdir src
+mkdir src/logic src/data src/ui
+touch src/index.js
+touch src/index.css
+
+mkdir dist
+touch dist/index.html
+
+# Success message
+echo "Project initialized successfully"
