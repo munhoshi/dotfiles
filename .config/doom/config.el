@@ -32,7 +32,20 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+
+;; Warm themes from darker to lighter
+;; (setq doom-theme 'doom-manegarm) ;; like a tree
+;; (setq doom-theme 'doom-peacock) ;; gruvbox with less colors
+;; (setq doom-theme 'doom-solarized-light) ;; creamy bg, bright saturated fg
+
+;; Cold themes from darker to lighter
+;; (setq doom-theme 'doom-one) ;; the default, neutral
+(setq doom-theme 'doom-one) ;; icy and cold
+
+;; Might delete due to ugly org mode colors...
+;; (setq doom-theme 'doom-gruvbox) ;; art cabin in the woods
+;; (setq doom-theme 'doom-horizon) ;; alien planet nightscape
+;; (setq doom-theme 'doom-moonlight) ;; exe internet @ night
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -97,12 +110,10 @@
 (evil-define-key 'normal global-map (kbd "o") (lambda () (interactive) (end-of-line) (open-line 1) (evil-normal-state) (next-line)))
 (evil-define-key 'normal global-map (kbd "O") (lambda () (interactive) (beginning-of-line) (open-line 1) (evil-normal-state)))
 
-;; Exit insert mode by pressing j and then j quickly
-;; (setq key-chord-two-keys-delay 0.3)
-;; (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
-;; (key-chord-mode 1)
-
 ;; Add pretty symbols for org-mode
 (setq
     org-superstar-headline-bullets-list '("⁖" "✿" "◉" "○" "✸")
 )
+
+;; Disable company-mode in org-mode, I only need 'intellisense' popups when working with code :)
+(setq company-global-modes '(not text-mode org-mode))
