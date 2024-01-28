@@ -1,4 +1,4 @@
-# lumipixi's dotfiles
+# Hoshi's dotfiles
 These are my dotfiles. They are managed via a bare repo. Thanks to @durdn for the [excellent guide](https://www.atlassian.com/git/tutorials/dotfiles)!
 
 ## Suggested packages
@@ -9,7 +9,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 **Other recommended software:**
 ```
 kitty neovim slock dmenu ranger urlscan
-rustup exa bat
+rustup eza bat
 ```
 
 ## Setup

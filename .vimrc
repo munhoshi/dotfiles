@@ -111,8 +111,8 @@ if $TERM == 'linux'
     colorscheme pablo
 elseif (has("termguicolors"))
 	set termguicolors
-  autocmd vimenter * ++nested colorscheme catppuccin_latte
-  let g:lightline = {'colorscheme': 'catppuccin_latte'}
+  autocmd vimenter * ++nested colorscheme catppuccin_frappe
+  let g:lightline = {'colorscheme': 'catppuccin_frappe'}
 endif
 
 " }}}
