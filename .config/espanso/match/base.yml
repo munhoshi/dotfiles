@@ -15,14 +15,14 @@ matches:
   # toki pona and other fun characters
   # Full-width interpunct
   - trigger: ",,"
-    replace: "・"
+    replace: " · "
 
   # te/to quotes
-  - trigger: "t/t"
+  - trigger: ",t,"
     replace: "〈$|$〉"
 
-  # Sta... nimi quotes
-  - trigger: "n/m"
+  # Stand and nimi quotes
+  - trigger: ",n,"
     replace: "「$|$」"
 
   # Full-width exclamation mark
@@ -44,7 +44,7 @@ matches:
       - name: mydate
         type: date
         params:
-          format: "%m/%d/%Y"
+          format: "%Y/%m/%d"
 
   # Print the output of a shell command
   - trigger: ":shell"
