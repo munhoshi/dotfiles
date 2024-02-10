@@ -8,12 +8,12 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#af-magic is very readable
-#kolo fits well with the purple desktop
-#wuffers is ridiculously simple
-#ZSH_THEME="af-magic"
+# ZSH_THEME="sporty_256"
+# ZSH_THEME="re5et"
+# ZSH_THEME="pygmalion"
+ZSH_THEME="flazz"
 # ZSH_THEME="kolo"
-ZSH_THEME="refined"
+# ZSH_THEME="muse"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load

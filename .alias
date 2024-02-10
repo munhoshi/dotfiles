@@ -1,5 +1,6 @@
 # Dotfile management
 alias conf='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias conft='conf ls-tree -t --name-only '
 
 # Hehehe
 alias pls="sudo -v; sudo "
@@ -23,6 +24,7 @@ alias l="eza -lh --color=always --group-directories-first"
 alias la="eza -lah --color=always --group-directories-first"
 alias fd="find"
 alias grep="rg"
+alias gt='git ls-tree -t --name-only '
 
 # Misc shell utilities
 alias clk="date +%r"
