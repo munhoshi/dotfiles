@@ -8,8 +8,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ```
 **Other recommended software:**
 ```
-kitty neovim slock dmenu ranger urlscan
-rustup eza bat
+kitty neovim dmenu rustup eza bat fd-find ripgrep
 ```
 
 ## Setup

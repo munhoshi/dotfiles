@@ -91,7 +91,8 @@ export PATH=/usr/local/cuda-12.1/bin${PATH:+:${PATH}}
 test -r ~/.dir_colors && eval "$(dircolors -b ~/.dir_colors)" || eval "$(dircolors -b)"
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  export EDITOR='nvim'
+  # export EDITOR='vim'
 else
   export EDITOR='nvim'
 fi
