@@ -21,7 +21,8 @@ alias sha="shasum -a 256"
 alias untar="tar -zxvf" 
 alias l="eza -lh --color=always --group-directories-first"
 alias la="eza -lah --color=always --group-directories-first"
-alias fn="find"
+alias fd="find"
+alias grep="rg"
 
 # Misc shell utilities
 alias clk="date +%r"

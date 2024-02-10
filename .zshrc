@@ -12,8 +12,8 @@ export ZSH="$HOME/.oh-my-zsh"
 #kolo fits well with the purple desktop
 #wuffers is ridiculously simple
 #ZSH_THEME="af-magic"
-ZSH_THEME="kolo"
-#ZSH_THEME="wuffers"
+# ZSH_THEME="kolo"
+ZSH_THEME="refined"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
