@@ -28,12 +28,11 @@ else
 endif
 
 " IDE Stuff !!WITH DEPENDENCIES!!
-Plug 'neoclide/coc.nvim', {'branch': 'release'} "needs node
-Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'} "needs node
+" Plug 'neoclide/coc.nvim', {'branch': 'release'} "needs node
+" Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'} "needs node
 Plug 'ThePrimeagen/vim-be-good' "needs nvim
 
 " Themes
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
-Plug 'morhetz/gruvbox'
 
 call plug#end()
