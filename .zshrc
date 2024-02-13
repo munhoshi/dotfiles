@@ -75,8 +75,8 @@ ZSH_THEME="flazz"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
+export NVM_LAZY=1
+plugins=(git nvm)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -84,7 +84,6 @@ source $ZSH/oh-my-zsh.sh
 #autoload $fpath/*
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH=$HOME/.local/bin:$HOME/scripts:$HOME/.config/emacs/bin:$PATH
-export PATH=/usr/local/cuda-12.1/bin${PATH:+:${PATH}}
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -110,9 +109,9 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.alias
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 . "$HOME/.cargo/env"
 
 # Produce BEEP when trying to delete characters from an empty line
