@@ -15,10 +15,6 @@ ZSH_THEME="flazz"
 # ZSH_THEME="kolo"
 # ZSH_THEME="muse"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
@@ -88,6 +84,7 @@ export PATH=$HOME/.local/bin:$HOME/scripts:$HOME/.config/emacs/bin:$PATH
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 test -r ~/.dir_colors && eval "$(dircolors -b ~/.dir_colors)" || eval "$(dircolors -b)"
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nvim'
@@ -99,14 +96,6 @@ fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.alias
 
 # export NVM_DIR="$HOME/.nvm"
@@ -116,6 +105,12 @@ source ~/.alias
 
 # Vi keybindings
 bindkey -v
+
+# Disable Ctrl+H erase keybinding when using Terminology
+# This is necessary so Neovim and Tmux splits work correctly
+if [ "$TERMINOLOGY" = "1" ]; then
+  stty erase ''
+fi
 
 # Produce BEEP when trying to delete characters from an empty line
 backward-delete-char() {
