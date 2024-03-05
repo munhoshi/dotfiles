@@ -71,8 +71,7 @@ ZSH_THEME="flazz"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-export NVM_LAZY=1
-plugins=(git nvm)
+plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -98,19 +97,13 @@ fi
 
 source ~/.alias
 
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-. "$HOME/.cargo/env"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
 # Vi keybindings
 bindkey -v
-
-# Disable Ctrl+H erase keybinding when using Terminology
-# This is necessary so Neovim and Tmux splits work correctly
-if [ "$TERMINOLOGY" = "1" ]; then
-  stty erase ''
-fi
 
 # Produce BEEP when trying to delete characters from an empty line
 backward-delete-char() {
