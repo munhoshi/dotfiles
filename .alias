@@ -9,7 +9,8 @@ alias please="pls"
 # Convenient shell aliases
 alias cp="cp -iv" # ask before overwrite, verbose"
 alias mv="mv -iv" # ask before overwrite, verbose"
-alias rm="rm -v" # ask before overwrite, verbose"
+alias rm="rm -v" # verbose"
+alias rmr="rm -rfv" # don't wanna type rm -r
 alias lt="ls -h -s -S -1" # ls in one column, show sizes, sort by largest, human readable
 alias du="du -h"
 alias df="df -h"
