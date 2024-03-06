@@ -13,6 +13,7 @@ alias rm="rm -v" # verbose"
 alias rmr="rm -rfv" # don't wanna type rm -r
 alias lt="ls -h -s -S -1" # ls in one column, show sizes, sort by largest, human readable
 alias du="du -h"
+alias dud="du -hs .[^.]* * | sort hr" # print directory sizes, include hidden files & dirs, human readable, descending
 alias df="df -h"
 alias when="stat -c %w"
 alias ka="killall -v"
@@ -23,7 +24,7 @@ alias sha="shasum -a 256"
 alias untar="tar -zxvf" 
 alias l="eza -lh --color=always --group-directories-first"
 alias la="eza -lah --color=always --group-directories-first"
-alias fd="find"
+alias find="fd"
 alias grep="rg"
 alias gt='git ls-tree -t --name-only '
 
