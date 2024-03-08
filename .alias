@@ -45,14 +45,5 @@ alias yta="yt-dlp -x -f bestaudio/best"
 alias recx="ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 -f pulse -i 1  $1"
 alias recsnd="ffmpeg -f pulse -i 1 -map 0:a  $1"
 
-# Emacs client in new window
-alias emacs="emacsclient -c -a 'emacs'"
-
-# Commands that do something in X
-# empty for now unless I start using dwm or something
-
-# Ruby stuff
-alias irb="irb --readline"
-
 # Short dirs (no quotes!)
 mnt=/run/media/$(whoami)
