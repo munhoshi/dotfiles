@@ -16,6 +16,8 @@ mapkey("<leader>`", "e #", "n") -- Switch to Other Buffer
 mapkey("<leader>bk", "bd", "n") -- Delete Buffer from open list
 
 -- Text Navigation
+vim.api.nvim_set_keymap("n", "n", "nzz", { noremap = false }) -- Recenter when moving through search results
+vim.api.nvim_set_keymap("n", "N", "Nzz", { noremap = false }) -- Recenter when moving through search results
 vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = false }) -- Recenter when scrolling down half a page
 vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = false }) -- Recenter when scrolling up half a page
 
