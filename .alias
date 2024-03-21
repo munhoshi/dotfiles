@@ -21,7 +21,7 @@ alias g="git"
 alias v="nvim"
 alias sv="sudo -v; sudo -E nvim "
 alias sha="shasum -a 256"
-alias untar="tar -zxvf" 
+alias untar="tar -xavf" # extract / auto detect format / verbose / this file ->
 alias l="eza -lh --color=always --group-directories-first"
 alias la="eza -lah --color=always --group-directories-first"
 alias find="fd"
